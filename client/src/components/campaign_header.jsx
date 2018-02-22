@@ -12,7 +12,7 @@ const CampaignHeader = (props) => (
         </div>
         <div className="title-and-tagline-container">
             <div className="title-and-tagline">
-                <h1>the title has been changed</h1>
+                <h1>back to title1</h1>
                 <h4>now the tagline has also been changed</h4>
             </div>
         </div>
