@@ -1,0 +1,37 @@
+.user-and-title-info {
+    display: flex;
+    border: solid;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 40px;
+}
+
+.title-and-tagline-container {
+    display: flex;
+    border: solid;
+    margin: 2px;
+    flex-grow: 3;
+    justify-content: center;
+}
+
+.title-and-tagline {
+    border: solid;
+    border-color: blue;
+    margin: 2px;
+   
+}
+
+.creatorInfo {
+    margin: 20px;
+    border: solid;
+    border-color: green;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.creator {
+    margin: 5px;
+
+}
