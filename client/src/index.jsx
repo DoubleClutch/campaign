@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {render} from 'react-dom';
 import CampaignHeader from './components/campaign_header.jsx';
 import VideoPlayer from './components/video.jsx';
+import About from './components/about.jsx';
 
 class App extends Component {
 // add state to the components
@@ -25,8 +26,9 @@ class App extends Component {
   render () {
     return (
         <div>
+          
             <CampaignHeader campaign={this.state.currentCampaign}/>
-            <VideoPlayer campaign={this.state.currentCampaign} />
+            <VideoPlayer campaign={this.state.currentCampaign} /> 
         </div>
     );
   }

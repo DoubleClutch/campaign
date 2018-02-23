@@ -65,6 +65,10 @@
 	
 	var _video2 = _interopRequireDefault(_video);
 	
+	var _about = __webpack_require__(/*! ./components/about.jsx */ 221);
+	
+	var _about2 = _interopRequireDefault(_about);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29709,6 +29713,111 @@
 	
 	// module
 	exports.push([module.id, ".main-video {\n    width: 640px;\n    height: 340px;\n\n    padding-left: 20px;\n    margin: 40px;\n}\n\n.bottom-tags {\n    display: flex;\n    margin-left: 60px;\n}\n\n.tags {\n    margin: 10px;\n}", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 221 */
+/*!*****************************************!*\
+  !*** ./client/src/components/about.jsx ***!
+  \*****************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(/*! ../css/about.css */ 222);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var About = function About(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        { className: 'about-container' },
+	        _react2.default.createElement(
+	            'div',
+	            null,
+	            'this will be the about campaign section'
+	        )
+	    );
+	};
+	
+	exports.default = About;
+
+/***/ }),
+/* 222 */
+/*!**********************************!*\
+  !*** ./client/src/css/about.css ***!
+  \**********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	
+	var content = __webpack_require__(/*! !../../../~/css-loader!./about.css */ 223);
+	
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	
+	var transform;
+	var insertInto;
+	
+	
+	
+	var options = {"hmr":true}
+	
+	options.transform = transform
+	options.insertInto = undefined;
+	
+	var update = __webpack_require__(/*! ../../../~/style-loader/lib/addStyles.js */ 190)(content, options);
+	
+	if(content.locals) module.exports = content.locals;
+	
+	if(false) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./about.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./about.css");
+	
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+	
+			var locals = (function(a, b) {
+				var key, idx = 0;
+	
+				for(key in a) {
+					if(!b || a[key] !== b[key]) return false;
+					idx++;
+				}
+	
+				for(key in b) idx--;
+	
+				return idx === 0;
+			}(content.locals, newContent.locals));
+	
+			if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+	
+			update(newContent);
+		});
+	
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 223 */
+/*!*************************************************!*\
+  !*** ./~/css-loader!./client/src/css/about.css ***!
+  \*************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css-base.js */ 188)(false);
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "", ""]);
 	
 	// exports
 
