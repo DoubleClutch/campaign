@@ -1,0 +1,16 @@
+.main-video {
+    width: 640px;
+    height: 340px;
+
+    padding-left: 20px;
+    margin: 40px;
+}
+
+.bottom-tags {
+    display: flex;
+    margin-left: 60px;
+}
+
+.tags {
+    margin: 10px;
+}
