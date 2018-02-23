@@ -34,4 +34,4 @@ class App extends Component {
   }
 }
 
-render(<App/>, document.getElementById('project-title'));
+render(<App/>, document.getElementById('campaign-title'));

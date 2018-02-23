@@ -116,7 +116,7 @@
 	    return App;
 	}(_react.Component);
 	
-	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('project-title'));
+	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('campaign-title'));
 
 /***/ }),
 /* 1 */
