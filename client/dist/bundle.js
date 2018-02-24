@@ -49,8 +49,6 @@
 
 	'use strict';
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -71,52 +69,58 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	// class App extends Component {
+	// // add state to the components
+	//     constructor(props) {
+	//         super(props)
 	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	//         this.state = {
+	//             currentCampaign: {
+	//                 title: 'Ledr: the tool roll for everyone!', 
+	//                 owner: 'Dave & Calvin Laituri', 
+	//                 location: 'Saxonville, Framingham, MA', 
+	//                 videoURL: 'https://ksr-video.imgix.net/projects/3260803/video-857213-h264_high.mp4', 
+	//                 tagline:'From pens & cables to wrenches & screwdrivers, bring order to your every day tools!', 
+	//                 about: 'double clutch needs no introduction',
+	//                 previousCampaigns: 3,
+	//                 category: 'A tool roll is one of the most versatile packing accessories',
+	//             }
+	//         }
+	//     }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//   render () {
+	//     return (
+	//         <div>
+	//             <CampaignHeader campaign={this.state.currentCampaign}/>
+	//             <VideoPlayer campaign={this.state.currentCampaign} /> 
+	//         </div>
+	//     );
+	//   }
+	// }
 	
-	var App = function (_Component) {
-	    _inherits(App, _Component);
-	
-	    // add state to the components
-	    function App(props) {
-	        _classCallCheck(this, App);
-	
-	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-	
-	        _this.state = {
-	            currentCampaign: {
-	                title: 'Ledr: the tool roll for everyone!',
-	                owner: 'Dave & Calvin Laituri',
-	                location: 'Saxonville, Framingham, MA',
-	                videoURL: 'https://ksr-video.imgix.net/projects/3260803/video-857213-h264_high.mp4',
-	                tagline: 'From pens & cables to wrenches & screwdrivers, bring order to your every day tools!',
-	                about: 'double clutch needs no introduction',
-	                previousCampaigns: 3,
-	                category: 'A tool roll is one of the most versatile packing accessories'
-	            }
-	        };
-	        return _this;
+	var defaultCampaign = {
+	    currentCampaign: {
+	        title: 'Ledr: the tool roll for everyone!',
+	        owner: 'Dave & Calvin Laituri',
+	        location: 'Saxonville, Framingham, MA',
+	        videoURL: 'https://ksr-video.imgix.net/projects/3260803/video-857213-h264_high.mp4',
+	        tagline: 'From pens & cables to wrenches & screwdrivers, bring order to your every day tools!',
+	        about: 'double clutch needs no introduction',
+	        previousCampaigns: 3,
+	        category: 'A tool roll is one of the most versatile packing accessories'
 	    }
 	
-	    _createClass(App, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(_campaign_header2.default, { campaign: this.state.currentCampaign }),
-	                _react2.default.createElement(_video2.default, { campaign: this.state.currentCampaign })
-	            );
-	        }
-	    }]);
+	    //need more <App> for each component
+	    //let campaignId = window.location
+	    // console.log(campaignId);
 	
-	    return App;
-	}(_react.Component);
-	
-	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('campaign-title'));
+	};window.CampaignHeader = _campaign_header2.default;
+	window.VideoPlayer = _video2.default;
+	// window.About = About;
+	// render(<CampaignHeader campaign={defaultCampaign.currentCampaign}/>, document.getElementById('campaign-title'));
+	// render(<VideoPlayer campaign={defaultCampaign.currentCampaign}/>, document.getElementById('campaign-video'));
+	// render(<VideoPlayer campaign={defaultCampaign.currentCampaign}/>, document.getElementById('campaign-video2'));
+	// render(<About/>, document.getElementById('campaign-about'));
 
 /***/ }),
 /* 1 */
@@ -22574,14 +22578,12 @@
 	            _react2.default.createElement(
 	                'div',
 	                { className: 'creator' },
-	                'by: ',
-	                props.campaign.owner
+	                'by: Chas Harring'
 	            ),
 	            _react2.default.createElement(
 	                'div',
 	                { className: 'creator' },
-	                props.campaign.previousCampaigns,
-	                ' projects'
+	                '5 projects'
 	            ),
 	            _react2.default.createElement(
 	                'div',
@@ -22602,12 +22604,12 @@
 	                _react2.default.createElement(
 	                    'h1',
 	                    null,
-	                    props.campaign.title
+	                    'This is a big ol bag'
 	                ),
 	                _react2.default.createElement(
 	                    'h4',
 	                    null,
-	                    props.campaign.tagline
+	                    'this is the best biggest ol bag'
 	                )
 	            )
 	        )
