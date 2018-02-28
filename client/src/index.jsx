@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import CampaignHeader from './components/campaign_header.jsx';
 import VideoPlayer from './components/video.jsx';
 import About from './components/about.jsx';
+import AboutContainer from './components/aboutContainer.jsx';
 
 // class App extends Component {
 // // add state to the components
@@ -52,8 +53,10 @@ const defaultCampaign = {
 
 window.CampaignHeader = CampaignHeader;
 window.VideoPlayer = VideoPlayer;
-// window.About = About;
+//window.AboutContainer = AboutContainer;
+
 // render(<CampaignHeader campaign={defaultCampaign.currentCampaign}/>, document.getElementById('campaign-title'));
 // render(<VideoPlayer campaign={defaultCampaign.currentCampaign}/>, document.getElementById('campaign-video'));
 // render(<VideoPlayer campaign={defaultCampaign.currentCampaign}/>, document.getElementById('campaign-video2'));
-// render(<About/>, document.getElementById('campaign-about'));
+
+// render(<AboutContainer />, document.getElementById('campaign-title'));
