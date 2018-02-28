@@ -1,8 +1,9 @@
 import React from 'react';
+import '../css/aboutImg.css'
 
 const AboutImg = (props) => (
     <div className="about-image">
-       this is where an image will go
+        <img src={props.img} alt="campaign" height="325" width="585" />
     </div>
 )
 

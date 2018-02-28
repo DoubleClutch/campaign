@@ -1,8 +1,9 @@
 import React from 'react';
+import '../css/AboutBody.css';
 
 const AboutBody = (props) => (
     <div className="about-body">
-       this is where a block of text will go
+       {props.body}
     </div>
 )
 

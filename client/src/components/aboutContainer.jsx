@@ -6,12 +6,17 @@ import AboutBody from './aboutBody.jsx';
 
 const AboutContainer = (props) => (
     <div className="about-container">
-        <div>
-            this will be the about campaign section
-        </div>
-        <AboutTitle />
-        <AboutImg />
-        <AboutBody />
+        {props.campaign.about.map((item) => {  
+            if(item.type === 'heading') {
+                return <AboutTitle title={item.value}/>
+            }
+            if(item.type === 'block') {
+                return <AboutBody body={item.value}/>
+            }
+            if(item.type === 'img') {
+                return <AboutImg img={item.value}/>
+            }
+        })}
     </div>
 )
 

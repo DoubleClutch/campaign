@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "MaisonNeue";
+    src: url("../maisonneuebook.woff") format("woff");
+}
+
+.about-body {
+    margin: 30px;
+    font-family: MaisonNeue, sans-serif;
+}
