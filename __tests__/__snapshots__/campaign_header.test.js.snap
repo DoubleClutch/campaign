@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Campaign Header should render correctly 1`] = `
+<div
+  className="user-and-title-info"
+>
+  <div
+    className="creatorInfo"
+  >
+    <div
+      className="creator"
+    >
+      <img
+        alt="user image"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="creator"
+    >
+      by: Chas Harring
+    </div>
+    <div
+      className="creator"
+    >
+      5 projects
+    </div>
+    <div>
+      <button>
+        Follow
+      </button>
+    </div>
+  </div>
+  <div
+    className="title-and-tagline-container"
+  >
+    <div
+      className="title-and-tagline"
+    >
+      <h1>
+        This is a big ol bag
+      </h1>
+      <h4>
+        this is the best biggest ol bag
+      </h4>
+    </div>
+  </div>
+</div>
+`;

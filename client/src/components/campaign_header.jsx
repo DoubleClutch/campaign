@@ -2,6 +2,8 @@ import React from 'react';
 import '../css/campaign_header.css';
 import userImg from '../assets/userImg.jpg';
 
+//upon getting the data then load the component, component did mount
+
 const CampaignHeader = (props) => (
     <div className="user-and-title-info">
         <div className="creatorInfo">
