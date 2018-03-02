@@ -16,7 +16,7 @@ let campaignSchema = mongoose.Schema ({
     previousCampaigns: Number,
 });
 
-let Campaign = mongoose.model('Campaign', campaignSchema);
+let aCampaign = mongoose.model('Campaign', campaignSchema);
 
 const createCampaign = (campaign, callback) => {
     let theCamp = new Campaign(campaign);
@@ -25,4 +25,10 @@ const createCampaign = (campaign, callback) => {
     });
 };
 
+const findCampaignInfo = (objWithId) => {
+    let data = aCampaign.findOne(objWithId);
+    return data;
+}
+
 module.exports.createCampaign = createCampaign;
+module.exports.findCampaignInfo = findCampaignInfo;
