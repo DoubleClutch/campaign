@@ -8,6 +8,7 @@ let campaignSchema = mongoose.Schema ({
     },
     title: String,
     owner: String,
+    ownerAvatar: String,
     location: String,
     videoURL: String,
     tagline: String,
@@ -19,9 +20,10 @@ let campaignSchema = mongoose.Schema ({
 let aCampaign = mongoose.model('Campaign', campaignSchema);
 
 const createCampaign = (campaign, callback) => {
-    let theCamp = new Campaign(campaign);
+    let theCamp = new aCampaign(campaign);
     theCamp.save(function(err) {
         console.log(err);
+        
     });
 };
 
