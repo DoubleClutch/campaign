@@ -7,7 +7,7 @@ app.use(BodyParser.json());
 
 app.use('/:id', express.static(__dirname + '/../client/dist'));
 
-app.get('/campaign-info/api/:id', function(req, res, next){
+app.get('/campaign-info/api/:id', function(req, res){
     db.findCampaignInfo({id: req.params.id})
     .then(dbResponse => res.send(dbResponse));
 });
