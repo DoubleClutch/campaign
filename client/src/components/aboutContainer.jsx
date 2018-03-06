@@ -11,7 +11,7 @@ class AboutContainer extends Component {
         super(props)
 
         this.state = {
-            id: 1,
+            id: this.props.idFromURL,
             about: [],
             aboutSectionTitle: 'im a title',
             aboutSectionBody: 'im the body of an about section',
@@ -23,7 +23,6 @@ class AboutContainer extends Component {
         fetch(`/campaign-info/api/${this.state.id}`)
         .then(res => res.json())
         .then(body => {
-            console.log(body.about);
             this.setState({
                 id: body.id,
                 about: body.about,
@@ -34,9 +33,7 @@ class AboutContainer extends Component {
     render() {
         return(
             <div className="about-container">
-                {console.log(this.state.about)}
                 {this.state.about.map((item, i) => {  
-                    console.log(item.type);
                     if(item.type === 'heading') {
                         return <AboutTitle title={item.value} key={i+1}/>
                     }

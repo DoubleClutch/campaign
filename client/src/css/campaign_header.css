@@ -5,39 +5,73 @@
 
 .user-and-title-info {
     display: flex;
-    border: solid;
     margin-left: 60px;
     margin-right: 60px;
     margin-top: 40px;
     font-family: MaisonNeue, sans-serif;
 }
 
+.title {
+    font-family: MaisonNeue, Arial, Helvetica, sans-serif;
+}
+
+.tagline {
+    opacity: 0.6;
+    font-family: MaisonNeue, sans-serif;
+}
+
 .title-and-tagline-container {
     display: flex;
-    border: solid;
     margin: 2px;
     flex-grow: 3;
     justify-content: center;
 }
 
 .title-and-tagline {
-    border: solid;
-    border-color: blue;
     margin: 2px;
+    font-family: MaisonNeue, sans-serif;
    
 }
 
 .creatorInfo {
-    margin: 20px;
-    border: solid;
-    border-color: green;
     display: flex;
     flex-direction: column;
-    
+    /* justify-content: center; */
+    margin-top: 15px;
+    width: 185px;
     
 }
 
-.creator {
-    margin: 5px;
 
+.avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.followBtn {
+    margin-top: 15px;
+    background-color: lightgray;
+    border: none;
+    /* color: white; */
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+}
+
+.creatorName {
+    margin: 2px;
+    font-size: .80em;
+    opacity: 0.8;
+}
+
+.creatorProjects {
+    margin: 2px;
+    font-size: .75em;
+    opacity: 0.6;
 }

@@ -2,15 +2,20 @@ import React, { Component } from 'react';
 import { Player, BigPlayButton, PosterImage } from 'video-react';
 import '../../../node_modules/video-react/dist/video-react.css';
 import '../css/video.css';
+import kickLogoSm from '../assets/greenLogo.png';
+import compass from '../assets/compass.png';
+import pin from '../assets/pin.png';
 
 class VideoPlayer extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            id: 1,
-            videoLink: 'https://ksr-ugc.imgix.net/assets/018/258/330/203e0e65214f740f7e8ba8ec15720c02_original.jpg?crop=faces&w=1024&h=576&fit=crop&v=1516029722&auto=format&q=92&s=29874380124a7722b19816b78779e199',
-            poster: 'https://ksr-ugc.imgix.net/assets/018/258/330/203e0e65214f740f7e8ba8ec15720c02_original.jpg?crop=faces&w=1024&h=576&fit=crop&v=1516029722&auto=format&q=92&s=29874380124a7722b19816b78779e199',
+            id: this.props.idFromURL, 
+            videoLink: 'https://www.kickstarter.com/projects/ferrowatches/tradiutm-a-swiss-made-mechanical-hand-wound-watch/widget/video.html',
+            //poster: '',
+            category: 'Product Design',
+            location: 'Burbank, CA'
         }
     }
 
@@ -18,10 +23,12 @@ class VideoPlayer extends Component {
         fetch(`/campaign-info/api/${this.state.id}`)
         .then(res => res.json())
         .then(body => {
+            console.log(body);
             this.setState({
-                id: body.id,
-                videoLink: body.videoLink,
-                poster: body.poster,
+                videoLink: body.videoURL,
+                category: body.category,
+                location: body.location,
+                // poster: body.videoURL,
             })
         })  
     }
@@ -30,18 +37,27 @@ class VideoPlayer extends Component {
         return (
             <div>
                 <div className="main-video">
-                    <Player
+                    <iframe width="640" height="360" src={this.state.videoLink} frameBorder='0' scrolling='no'></iframe>
+                    {/* <Player
                         playsInline
-                        
-                        poster={this.state.poster}
+                        poster={this.state.videoLink}
                         src={this.state.videoLink}>
                         <BigPlayButton position="center" />
-                    </Player>
+                    </Player> */}
                 </div>
                 <div className="bottom-tags">
-                    <div className="tags">element 1</div>
-                    <div className="tags">element 2</div>
-                    <div className="tags">element 3</div>
+                    <div className="icon-group">
+                        <img className="logo" src={kickLogoSm} alt={"logo"}></img>
+                        <div className="tags">Project We Love</div>
+                    </div>
+                    <div className="icon-group">
+                        <img className="icon" src={compass} alt={"logo"}></img>
+                        <div className="tags">{this.state.category}</div>
+                    </div>
+                    <div className="icon-group">
+                        <img className="pin" src={pin} alt={"logo"}></img>
+                        <div className="tags">{this.state.location}</div>
+                    </div>
                 </div>
             </div>
             
