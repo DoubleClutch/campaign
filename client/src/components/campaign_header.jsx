@@ -20,7 +20,15 @@ class CampaignHeader extends Component {
     }
 
     componentWillMount() {
-        fetch(`/campaign-info/api/${this.state.id}`)
+        if(this.state.id === '') {
+            this.getHeader(1);
+        } else {
+            this.getHeader(this.state.id);
+        }
+    }
+
+    getHeader(currentID) {
+        fetch(`http://127.0.0.1:3300/campaign-info/api/${currentID}`)
         .then(res => res.json())
         .then(body => {
             this.setState({

@@ -20,7 +20,15 @@ class VideoPlayer extends Component {
     }
 
     componentWillMount() {
-        fetch(`/campaign-info/api/${this.state.id}`)
+        if(this.props.idFromURL === '') {
+            this.getVideo(1);
+        } else {
+            this.getVideo(this.state.id);
+        }
+    }
+
+    getVideo(currentID) {
+        fetch(`http://127.0.0.1:3300/campaign-info/api/${currentID}`)
         .then(res => res.json())
         .then(body => {
             console.log(body);
