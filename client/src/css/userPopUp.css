@@ -1,0 +1,26 @@
+.user-bio-box {
+  border: solid;
+  height:100px;
+  width: 100%;
+  background-color: green;
+}
+
+.showUserBioTransition-enter {
+  transform: translate(100%);
+}
+
+.showUserBioTransition-enter.showUserBioTransition-enter-active {
+transform: translate(0%);
+transition: 500ms ease-in-out;
+}
+
+.showUserBioTransition-leave {
+transform: translate(0%);
+display: none;
+}
+
+.showUserBioTransition.showUserBioTransition-leave-active {
+  transform: translate(-100%);
+  transition: 500ms ease-in-out;
+  display: none;
+}
