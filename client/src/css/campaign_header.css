@@ -9,6 +9,8 @@
     margin-right: 60px;
     margin-top: 40px;
     font-family: MaisonNeue, sans-serif;
+    /* height: auto; */
+    
 }
 
 .title {
@@ -22,15 +24,18 @@
 
 .title-and-tagline-container {
     display: flex;
+    flex-direction: row;
+    border: solid;
     margin: 2px;
     flex-grow: 3;
     justify-content: center;
+    align-items: center;
+    
 }
 
 .title-and-tagline {
     margin: 2px;
     font-family: MaisonNeue, sans-serif;
-   
 }
 
 .creatorInfo {
@@ -39,7 +44,7 @@
     /* justify-content: center; */
     margin-top: 15px;
     width: 185px;
-    
+    /* height: auto; */
 }
 
 
@@ -58,7 +63,7 @@
     padding: 10px 12px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 12px;
     /* margin: 4px 2px; */
     cursor: pointer;
@@ -75,3 +80,50 @@
     font-size: .75em;
     opacity: 0.6;
 }
+
+/* slide */
+.showHeadingTransition-enter {
+    transform: translate(100%);
+  }
+  
+  .showHeadingTransition-enter.showHeadingTransition-enter-active {
+  transform: translate(0%);
+  /* position: 'fixed'; */
+  /* z-index: 2; */
+  transition: 500ms ease-in-out;
+  }
+  
+  .showHeadingTransition-leave {
+  display: none;
+  transform: translate(0%);
+  position: relative;  
+  opacity: 0.01;
+  }
+  
+  .showHeadingTransition.showHeadingTransition-leave-active {
+    transform: translate(0%);
+    position: relative;
+    display: none;
+    opacity: 0.01;
+    transition: 500ms ease-in-out;
+  }
+
+  /* fade */
+  /* .showHeadingTransition-enter {
+    opacity: 0.01;
+  }
+  
+  .showHeadingTransition-enter.showHeadingTransition-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms ease-in;
+  }
+  
+  .showHeadingTransition-exit {
+    opacity: 1;
+  }
+  
+  .showHeadingTransition-exit.showHeadingTransition-exit-active {
+    opacity: 0.01;
+    transition: opacity 800ms ease-in;
+  }
+   */
